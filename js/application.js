@@ -55,6 +55,8 @@
             row.innerHTML = html;
             document.querySelector('#userlist tbody').appendChild(row);
 
+            document.querySelector('#addrow').reset();
+
             addFormAlert('#addrowalerts', 'success', 'User added');
         } else {
             if (response.status == '400') {
