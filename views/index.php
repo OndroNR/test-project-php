@@ -1,6 +1,8 @@
-<h1>PHP Test Application</h1>
 
-<table>
+
+<h2>List of users</h2>
+
+<table class="table table-striped">
 	<thead>
 		<tr>
 			<th>Name</th>
@@ -17,18 +19,41 @@
 		</tr>
 		<?php endforeach; ?>
 	</tbody>
-</table>				
+</table>
 
-<form method="post" action="create.php">
-	
-	<label for="name">Name:</label>
-	<input name="name" input="text" id="name"/>
-	
-	<label for="email">E-mail:</label>
-	<input name="email" input="text" id="email"/>
-	
-	<label for="city">City:</label>
-	<input name="city" input="text" id="city"/>
-	
-	<button>Create new row</button>
-</form>
+<div class="card">
+	<div class="card-header">
+		Add new user
+	</div>
+
+	<div class="card-body">
+		<form method="post" action="create.php">
+			<div class="row mb-3"">
+				<label for="name" class="col-sm-2 col-form-label">Name:</label>
+				<div class="col-sm-10">
+					<input name="name" input="text" id="name" class="form-control"/>
+				</div>
+			</div>
+
+			<div class="row mb-3"">
+				<label for="email" class="col-sm-2 col-form-label">E-mail:</label>
+				<div class="col-sm-10">
+					<input name="email" input="text" id="email" class="form-control"/>
+				</div>
+			</div>
+
+			<div class="row mb-3"">
+				<label for="city" class="col-sm-2 col-form-label">City:</label>
+				<div class="col-sm-10">
+					<input name="city" input="text" id="city" class="form-control"/>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-10 offset-sm-2">
+					<button class="form-control btn-primary">Add</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
