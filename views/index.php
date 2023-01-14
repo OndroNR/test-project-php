@@ -32,24 +32,24 @@
 
 	<div class="card-body">
 		<form method="post" action="create.php">
-			<div class="row mb-3"">
+			<div class="row mb-3">
 				<label for="name" class="col-sm-2 col-form-label">Name:</label>
 				<div class="col-sm-10">
-					<input name="name" input="text" id="name" class="form-control"/>
+					<input name="name" type="text" id="name" class="form-control"/>
 				</div>
 			</div>
 
-			<div class="row mb-3"">
+			<div class="row mb-3">
 				<label for="email" class="col-sm-2 col-form-label">E-mail:</label>
 				<div class="col-sm-10">
-					<input name="email" input="text" id="email" class="form-control"/>
+					<input name="email" type="text" id="email" class="form-control"/>
 				</div>
 			</div>
 
-			<div class="row mb-3"">
+			<div class="row mb-3">
 				<label for="city" class="col-sm-2 col-form-label">City:</label>
 				<div class="col-sm-10">
-					<input name="city" input="text" id="city" class="form-control"/>
+					<input name="city" type="text" id="city" class="form-control"/>
 				</div>
 			</div>
 
