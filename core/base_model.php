@@ -97,7 +97,7 @@ class BaseModel {
 		// Parse null values
 		if($value === null)return 'NULL';
 		// Escape string values
-		if(!is_numeric($value))return "'".htmlentities(addslashes($value))."'"; 
+		if(!is_numeric($value))return "'".htmlentities(addslashes($value))."'";  // There should be used mysqli::real_escape_string instead, but requires mysqli instance
 		return $value;
 	}
 	
