@@ -1,5 +1,9 @@
 <?php
 
+require_once dirname(__FILE__) . '/../vendor/autoload.php';
+use Tracy\Debugger;
+Debugger::enable();
+
 // Load BaseModel and all models from models directory
 require dirname(__FILE__).'/base_model.php';
 foreach (glob(dirname(__FILE__).'/../models/*.php') as $filename){
