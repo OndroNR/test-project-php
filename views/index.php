@@ -33,7 +33,7 @@
 	</div>
 
 	<div class="card-body">
-		<form method="post" action="create.php" id="addrow" method="post">
+		<form method="post" action="create.php" id="addrow">
 			<div id="addrowalerts"></div>
 
 			<div class="row mb-3">
