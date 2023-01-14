@@ -11,6 +11,7 @@
 		<tr>
 			<th>Name</th>
 			<th>E-mail</th>
+			<th>Phone</th>
 			<th>City</th>
 		</tr>
 	</thead>
@@ -19,6 +20,7 @@
 		<tr>
 			<td><?=$user->getName()?></td>
 			<td><?=$user->getEmail()?></td>
+			<td><?=$user->getPhone()?></td>
 			<td class="city"><?=$user->getCity()?></td>
 		</tr>
 		<?php endforeach; ?>
@@ -45,6 +47,13 @@
 				<label for="email" class="col-sm-2 col-form-label">E-mail:</label>
 				<div class="col-sm-10">
 					<input name="email" type="text" id="email" class="form-control"/>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+				<div class="col-sm-10">
+					<input name="phone" type="text" id="phone" class="form-control"/>
 				</div>
 			</div>
 

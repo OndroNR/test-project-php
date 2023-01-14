@@ -21,6 +21,10 @@ class User extends BaseModel{
 	public function getEmail() {
 		return $this->getField('email');
 	}
+
+	public function getPhone() {
+		return $this->getField('phone');
+	}
 	
 	public function getCity() {
 		return $this->getField('city');
@@ -39,6 +43,14 @@ class User extends BaseModel{
 		} else {
 			if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
 				$errors->addError('Email is invalid');
+			}
+		}
+
+		if (empty($data['phone'])) {
+			$errors->addError('Phone number is missing');
+		} else {
+			if (!preg_match("/[0-9\+ ]{6,30}/", $data['phone'])) {
+				$errors->addError('Phone number is invalid');
 			}
 		}
 

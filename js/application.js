@@ -51,7 +51,7 @@
 
             // add new user into table
             const row = document.createElement('tr');
-            let html = '<td>' + newUser.name + '</td><td>' + newUser.email + '</td><td class="city">' + newUser.city + '</td>';
+            let html = '<td>' + newUser.name + '</td><td>' + newUser.email + '</td><td>' + newUser.phone + '</td><td class="city">' + newUser.city + '</td>';
             row.innerHTML = html;
             document.querySelector('#userlist tbody').appendChild(row);
 

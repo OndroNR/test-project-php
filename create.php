@@ -8,6 +8,7 @@ $user = new User($app->db);
 $obj = array(
 	'name' => $_POST['name'],
 	'email' => $_POST['email'],
+	'phone' => $_POST['phone'],
 	'city' => $_POST['city']
 );
 
@@ -20,7 +21,7 @@ if (!$validationError->isValid) {
 		echo json_encode($validationError->errors);
 	} else {
 		echo 'Validation error while adding new user';
-		echo print_r($validationError->errors);
+		print_r($validationError->errors);
 	}
 } else {
 	// Insert it to database with POST data
@@ -34,6 +35,7 @@ if (!$validationError->isValid) {
 		echo json_encode([
 			'name' => $newUser->getName(),
 			'email' => $newUser->getEmail(),
+			'phone' => $newUser->getPhone(),
 			'city' => $newUser->getCity()
 		]);
 	} else {
