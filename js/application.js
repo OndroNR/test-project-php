@@ -57,6 +57,8 @@
 
             document.querySelector('#addrow').reset();
 
+            filter();
+
             addFormAlert('#addrowalerts', 'success', 'User added');
         } else {
             if (response.status == '400') {
