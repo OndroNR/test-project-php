@@ -89,16 +89,24 @@ class BaseModel {
 	 */
 	public static function escapeValue($value){
 		// Handle arrays
-		if(is_array($value)){
+		if (is_array($value)) {
 			$ret = array();
 			foreach($value as $v)$ret[] = self::escapeValue($v);
 			return $ret;
 		}
+
 		// Parse null values
-		if($value === null)return 'NULL';
+		if ($value === null) {
+			return 'NULL';
+		}
+
+		// Pass int and float
+		if (is_int($value) || is_float($value)) {
+			return $value;
+		}
+
 		// Escape string values
-		if(!is_numeric($value))return "'".htmlentities(addslashes($value))."'";  // There should be used mysqli::real_escape_string instead, but requires mysqli instance
-		return $value;
+		return "'".htmlentities(addslashes($value))."'";  // There should be used mysqli::real_escape_string instead, but requires mysqli instance
 	}
 	
 	/**
