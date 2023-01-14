@@ -1,8 +1,12 @@
-
-
 <h2>List of users</h2>
 
-<table class="table table-striped">
+<div class="d-flex flex-wrap justify-content-lg-end">
+	<form class="col-12 col-lg-auto mb-3 mb-lg-0">
+		<input type="search" class="form-control" placeholder="Search by city" aria-label="Search by city" id="searchbox">
+	</form>
+</div>
+
+<table class="table table-striped" id="userlist">
 	<thead>
 		<tr>
 			<th>Name</th>
@@ -15,7 +19,7 @@
 		<tr>
 			<td><?=$user->getName()?></td>
 			<td><?=$user->getEmail()?></td>
-			<td><?=$user->getCity()?></td>
+			<td class="city"><?=$user->getCity()?></td>
 		</tr>
 		<?php endforeach; ?>
 	</tbody>
