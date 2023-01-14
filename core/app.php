@@ -54,7 +54,10 @@ class App {
 		// Render $content in layout
 		include './views/layout.php';
 	}
-	
+
+	public function isAjax() {
+		return (strtolower(filter_input(INPUT_SERVER, 'HTTP_X_REQUESTED_WITH')) === 'xmlhttprequest');
+	}
 }
 
 return new App();

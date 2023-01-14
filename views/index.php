@@ -31,7 +31,9 @@
 	</div>
 
 	<div class="card-body">
-		<form method="post" action="create.php">
+		<form method="post" action="create.php" id="addrow" method="post">
+			<div id="addrowalerts"></div>
+
 			<div class="row mb-3">
 				<label for="name" class="col-sm-2 col-form-label">Name:</label>
 				<div class="col-sm-10">
